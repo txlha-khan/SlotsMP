@@ -30,6 +30,8 @@ public class Main{
                 scanner.nextLine();
             }
 
+            balance -=bet;
+
             System.out.print("Spinning");
 
             for (int i = 0; i < 3; i++) {
@@ -44,12 +46,15 @@ public class Main{
             for (int j = 0; j < 3; j++) {
                 spinSymbol[j] = symbols[random.nextInt(5)];
             }
-            for (String symbol : spinSymbol) {
+            /*for (String symbol : spinSymbol) {
                 System.out.print("|");
                 System.out.print(symbol);
             }
             System.out.print("|");
-            System.out.println();
+            System.out.println();*/
+
+            System.out.println(" " + String.join(" | ", spinSymbol));
+            //cool new way String.join() will put whatever is in the () between the elements
 
             if(spinSymbol[0].equals(spinSymbol[1]) && spinSymbol[1].equals(spinSymbol[2])){
                 balance += bet * 3;
