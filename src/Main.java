@@ -6,13 +6,13 @@ public class Main{
 
         System.out.println("***********************");
         System.out.println(" Welcome to Java slots ");
-        System.out.println("  Symbols: 😂 😭 😱   ");
+        System.out.println("Symbols: 😂 😭 😱 ❤️ 👌");
         System.out.println("***********************");
 
         int balance = 100;
         int bet = 0;
         String playAgain = "y";
-        String[] symbols = {"😂", "😭", "😱"};
+        String[] symbols = {"😂", "😭", "😱", "❤️", "👌"};
         String[] spinSymbol = new String[3];
 
         Scanner scanner = new Scanner(System.in);
@@ -42,7 +42,7 @@ public class Main{
             System.out.println();
 
             for (int j = 0; j < 3; j++) {
-                spinSymbol[j] = symbols[random.nextInt(3)];
+                spinSymbol[j] = symbols[random.nextInt(5)];
             }
             for (String symbol : spinSymbol) {
                 System.out.print("|");
